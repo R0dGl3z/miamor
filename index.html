@@ -11,19 +11,18 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            overflow: hidden; 
             font-family: 'Arial', sans-serif;
         }
 
-        /* ================= PANTALLA 1 ================= */
         #screen1 {
             width: 100%;
             height: 100vh;
             background-image: url('fondo2.png');
-            background-size: cover;
+            background-size: cover; 
             background-position: center;
             background-repeat: no-repeat;
-
+            
             display: flex;
             justify-content: center;
             align-items: center;
@@ -33,121 +32,83 @@
 
         .heart-btn {
             cursor: pointer;
-            width: 60vw;
-            max-width: 850px;
-            animation: latido 1.5s infinite;
+            width: 850px; 
             transition: transform 0.3s ease;
+            animation: latido 1.5s infinite;
         }
 
         .heart-btn:hover {
-            transform: scale(1.1);
+            transform: scale(1.1); 
         }
 
-        @keyframes latido {
+       @keyframes latido {
             0% { transform: scale(1); }
             50% { transform: scale(1.15); }
             100% { transform: scale(1); }
         }
 
-        /* ================= PANTALLA 2 ================= */
         #screen2 {
             width: 100%;
             height: 100vh;
             background-image: url('fondo2.png');
-            background-size: cover;
+            background-size: cover; 
             background-position: center;
             background-repeat: no-repeat;
-
-            display: none;
+            
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            opacity: 0;
+            opacity: 0; 
             transition: opacity 1s ease;
         }
 
         .card-container {
             position: relative;
-            width: 100%;
-            max-width: 900px;
+            width: auto;
+            max-width: 90%;
             text-align: center;
-            margin: 0 auto;
+            margin-right: 200px; 
         }
 
         .carta-img {
-            width: 100%;
-            max-width: 700px;
-            max-height: 70vh;
+            max-width: 100%;
+            max-height: 70vh; 
             border-radius: 10px;
+            margin-right: 250px !important;        
         }
 
         .flores-img {
             position: absolute;
-            bottom: -70px;
-            right: -30px;
-            width: 220px;
+            bottom: -150px; 
+            right: 250px; 
+            width: 380px; 
             z-index: 10;
-            transform: rotate(35deg);
+            transform: rotate(40deg); 
         }
 
-        /* === CADENA === */
         .love-img {
-            position: absolute;
-            bottom: -120px; /* Desktop */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 420px;
-            max-width: 80%;
-            z-index: 5;
-        }
-
-        /* ================= MOBILE ================= */
-        @media (max-width: 768px) {
-
-            .heart-btn {
-                width: 80vw;
-            }
-
-            .carta-img {
-                max-width: 90vw;
-                max-height: 60vh;
-            }
-
-            .flores-img {
-                width: 150px;
-                bottom: -40px;
-                right: -15px;
-                transform: rotate(25deg);
-            }
-
-            .love-img {
-                position: relative;
-                bottom: 0;
-                left: auto;
-                transform: none;
-                width: 260px;
-                margin: 20px auto 0;
-                display: block;
-            }
+            position: absolute; 
+            right: 300px;       
+            bottom: 340px;      
+            width: 600px;      
+            height: auto;
+            z-index: 5;       
         }
 
     </style>
 </head>
-
 <body>
 
-    <!-- ================= PANTALLA 1 ================= -->
     <div id="screen1">
         <img src="heart.png" alt="Corazón" class="heart-btn" onclick="goToLetter()">
     </div>
 
-    <!-- ================= PANTALLA 2 ================= -->
-    <div id="screen2">
+    <div id="screen2">        
         <div class="card-container">
             <img src="carta.png" alt="Carta" class="carta-img">
             <img src="flores.png" alt="Flores" class="flores-img">
-            <img src="love.png" alt="Love" class="love-img">
         </div>
+        <img src="love.png" alt="Love" class="love-img">
     </div>
 
     <script>
@@ -160,14 +121,14 @@
             setTimeout(() => {
                 screen1.style.display = 'none';
                 screen2.style.display = 'flex';
-
+                
                 setTimeout(() => {
                     screen2.style.opacity = '1';
                 }, 50);
-
-            }, 1000);
+            }, 1000); 
         }
     </script>
 
 </body>
+
 </html>
