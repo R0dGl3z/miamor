@@ -64,7 +64,6 @@
             flex-direction: column;
             opacity: 0;
             transition: opacity 1s ease;
-            position: relative;
         }
 
         .card-container {
@@ -84,20 +83,21 @@
 
         .flores-img {
             position: absolute;
-            bottom: -80px;
-            right: -40px;
+            bottom: -70px;
+            right: -30px;
             width: 220px;
             z-index: 10;
-            transform: rotate(40deg);
+            transform: rotate(35deg);
         }
 
+        /* === CADENA === */
         .love-img {
             position: absolute;
-            bottom: 20vh;
-            right: 5vw;
-            width: 40vw;
-            max-width: 600px;
-            height: auto;
+            bottom: -120px; /* Desktop */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 420px;
+            max-width: 80%;
             z-index: 5;
         }
 
@@ -114,16 +114,20 @@
             }
 
             .flores-img {
-                width: 160px;
-                bottom: -50px;
-                right: -20px;
+                width: 150px;
+                bottom: -40px;
+                right: -15px;
                 transform: rotate(25deg);
             }
 
             .love-img {
-                width: 70vw;
-                right: 15vw;
-                bottom: 10vh;
+                position: relative;
+                bottom: 0;
+                left: auto;
+                transform: none;
+                width: 260px;
+                margin: 20px auto 0;
+                display: block;
             }
         }
 
@@ -132,18 +136,18 @@
 
 <body>
 
-    <!-- PANTALLA 1 -->
+    <!-- ================= PANTALLA 1 ================= -->
     <div id="screen1">
         <img src="heart.png" alt="Corazón" class="heart-btn" onclick="goToLetter()">
     </div>
 
-    <!-- PANTALLA 2 -->
+    <!-- ================= PANTALLA 2 ================= -->
     <div id="screen2">
         <div class="card-container">
             <img src="carta.png" alt="Carta" class="carta-img">
             <img src="flores.png" alt="Flores" class="flores-img">
+            <img src="love.png" alt="Love" class="love-img">
         </div>
-        <img src="love.png" alt="Love" class="love-img">
     </div>
 
     <script>
